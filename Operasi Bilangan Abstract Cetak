@@ -1,0 +1,28 @@
+package modul5;
+
+public final class OperasiBilanganAbsCetak {
+    private final String cetak = "Operasi Bilangan";
+    private void cetakSemua(OperasiBilanganAbs[] OB,double a,double b){
+        System.out.println(cetak);
+        for(int i=0; OB.length>=i; i++){
+            OB[i].setA(a);
+            OB[i].setB(b);
+            OB[i].setC();
+            
+            OB[i].tampil();
+        }
+    }
+    
+    public static void main(String[] args) {
+        double a = 6.5;
+        double b = 0.5;
+        OperasiBilanganAbs[] OB = { new OperasiPenjumlahan(),
+                                    new OperasiPengurangan(),
+                                    new OperasiPerkalian(),
+                                    new OperasiPembagian()};
+        
+        OperasiBilanganAbsCetak print = new OperasiBilanganAbsCetak();
+        print.cetakSemua(OB, a, b);
+    }
+    
+}
